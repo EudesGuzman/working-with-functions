@@ -1,20 +1,23 @@
-const rapid = (str)=>{
-    let letras= str.toUpperCase().split('');
-    let palabra;
+const rapid = (str) => {
+let vocales ="";
 
-    for( let i = 0; i < letras.length; i++){
-         //    if ( letras[i] !== "A" || letras[i] !== "E" || letras[i] !== "I" || letras[i] !== "O" || letras[i] !== "U"){
-        if (letras[i] !== "O"){
-               palabra = letras.splice(i,4)
-               console.log(palabra);
+    for (let i = 0; i < str.length; i++) {
+        
+        if (str[i] == "a" || str[i] == "e" ||str[i] == "i" || str[i] == "o" || str[i] == "u"){
+          vocales = vocales.concat("");
+       } else {
+         vocales = vocales.concat(str[i]);
 
-        }  
-     }
+       }
 
-};
+    
+    };
+    return vocales.toUpperCase();
+} 
 
-   // From this line up Do not change code below
-   let str = "John";
-   console.log(rapid(str));
+// From this line up Do not change code below
+let str = "John";
+console.log(rapid(str)); 
+
 
 
